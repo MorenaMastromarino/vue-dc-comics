@@ -59,7 +59,22 @@
       </div>
     </div>
 
-    <div class="footer-bottom"></div>
+    <div class="footer-bottom">
+      <div class="container">
+
+        <div class="button">sign-up now!</div>
+
+        <div class="social-icons">
+          <a href="#">follow us</a>
+          <a href="#"><img src="../assets/img/footer-facebook.png" alt="facebook logo"></a>
+          <a href="#"><img src="../assets/img/footer-twitter.png" alt="twitter logo"></a>
+          <a href="#"><img src="../assets/img/footer-youtube.png" alt="youtube logo"></a>
+          <a href="#"><img src="../assets/img/footer-pinterest.png" alt="pinterest logo"></a>
+          <a href="#"><img src="../assets/img/footer-periscope.png" alt="periscope logo"></a>        
+        </div>
+
+      </div>
+    </div>
   </footer>
 </template>
 
@@ -76,11 +91,11 @@ export default {
 
   footer {
     .footer-top {
-      background-image: url(../assets/img/footer-bg.jpg);
-      background-size: cover;
+      @include center-flex(center);
       height: 370px;
       overflow: hidden;
-      @include center-flex(center);
+      background-image: url(../assets/img/footer-bg.jpg);
+      background-size: cover;
   
       .container{
         @include center-flex(between);
@@ -91,21 +106,21 @@ export default {
           .column {
             width: 150px;
             h3 {
+              margin-bottom: 20px;
               text-transform: uppercase;
               color: #fff;
-              margin-bottom: 20px;
             }
             ul {
               margin-bottom: 20px;
               a {
-                font-size: 11px;
                 line-height: 20px;
+                font-size: 11px;
                 color: $footer-text-color;
               }
             }
           }
         }
-          
+
         .footer-logo {
           width: 45%;
         }
@@ -116,6 +131,21 @@ export default {
     .footer-bottom {
       height: 100px;
       background-color: #303030;
+      .container {
+        @include center-flex(between);
+        height: 100%;
+        .social-icons a {
+          padding: 0 10px;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: $primary-color;
+          img {
+            width: 35px;
+            vertical-align: middle;
+          }
+        }
+      }
+     
     }
 
   }

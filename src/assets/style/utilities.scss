@@ -1,4 +1,16 @@
+@import './vars.scss';
+
 .container {
   width: 80%; 
   margin: 0 auto;
+}
+
+.button {
+  padding: 15px;
+  border: 2px solid $primary-color;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
 }
