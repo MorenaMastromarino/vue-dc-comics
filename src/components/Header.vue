@@ -9,16 +9,9 @@
 
     <nav>
       <ul>
-        <li><a href="#">characters</a></li>
-        <li><a class="active" href="#">comics</a></li>
-        <li><a href="#">movies</a></li>
-        <li><a href="#">tv</a></li>
-        <li><a href="#">games</a></li>
-        <li><a href="#">collectibles</a></li>
-        <li><a href="#">videos</a></li>
-        <li><a href="#">fans</a></li>
-        <li><a href="#">news</a></li>
-        <li><a href="#">shop</a></li>
+        <li v-for="(link, index) in navLinks" :key="index">
+          <a :class="{active: link.active}" :href="link.url">{{link.text}}</a>
+        </li>        
       </ul>
     </nav>
    
@@ -28,6 +21,62 @@
 <script>
 export default {
   name: 'Header',
+  data(){
+    return{
+      navLinks:[
+        {
+          url: '/',
+          text: 'characters',
+          active: false,
+        },
+        {
+          url: '/',
+          text: 'comics',
+          active: true,
+        },
+        {
+          url: '/',
+          text: 'movies',
+          active: false,
+        },
+        {
+          url: '/',
+          text: 'tv',
+          active: false,
+        },
+        {
+          url: '/',
+          text: 'games',
+          active: false,
+        },
+        {
+          url: '/',
+          text: 'collectibles',
+          active: false,
+        },
+        {
+          url: '/',
+          text: 'videos',
+          active: false,
+        },
+        {
+          url: '/',
+          text: 'fans',
+          active: false,
+        },
+        {
+          url: '/',
+          text: 'news',
+          active: false,
+        },
+        {
+          url: '/',
+          text: 'shop',
+          active: false,
+        },
+      ],
+    }
+  },
 
 }
 </script>
