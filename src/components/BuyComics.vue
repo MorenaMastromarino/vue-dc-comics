@@ -43,7 +43,7 @@ export default {
     color: #fff;
     li {
       display: inline-block;
-      padding: 0 35px;
+      padding: 0 30px;
       img {
         width: 50px;      
         vertical-align: middle;

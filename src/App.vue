@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <Header/>
     <Main/>
     <BuyComics/>
@@ -28,4 +28,7 @@ export default {
 @import './assets/style/general.scss';
 @import './assets/style/utilities.scss';
 
+.wrapper {
+  min-width: 1300px;
+}
 </style>
