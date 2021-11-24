@@ -40,7 +40,7 @@ export default {
     @include center-flex(between);
     height: 100px;
 
-    .logo {
+    img {
       width: 80px;
     }
     
