@@ -6,6 +6,7 @@
 }
 
 .button {
+  display: inline-block;
   padding: 15px;
   border: 2px solid $primary-color;
   text-transform: uppercase;
@@ -13,4 +14,26 @@
   font-weight: bold;
   color: #fff;
   cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+.button.blue {
+  background-color: $primary-color;
+  &:hover {
+    border: 2px solid lighten($primary-color, 15%);
+    background-color: lighten($primary-color, 15%);
+  }
+}
+
+.button.big {
+  font-size: 22px;
+  padding: 16px 30px;
+}
+
+.button.small {
+  font-size: 12px;
+  padding: 13px 60px;
 }

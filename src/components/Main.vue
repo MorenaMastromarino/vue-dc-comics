@@ -5,12 +5,18 @@
     <div class="current-series">
       <div class="container">
 
-        <SerieCard 
-          v-for="(card, index) in cardsData"
-          :key= "index"
-          :cardImage= "card.thumb"
-          :cardTitle= "card.series"
-        />            
+        <div class="button blue big" id="current-btn">current series</div>
+
+        <div class="cards-container">
+          <SerieCard 
+            v-for="(card, index) in cardsData"
+            :key= "index"
+            :cardImage= "card.thumb"
+            :cardTitle= "card.series"
+          />
+        </div>
+
+        <div class="button blue small">load more</div>
 
       </div>
     </div>
@@ -52,9 +58,22 @@ export default {
 
     .current-series{
       background-color: darken($secondary-color, 8%);
+
       .container {
-        @include flex-wrap();
-        padding: 20px 0;         
+        position: relative;
+        padding-top: 35px;
+        padding-bottom: 20px;
+        text-align: center;
+        
+        #current-btn {
+          position: absolute;
+          left: 0;
+          top: -35px;
+        }
+
+        .cards-container {
+          @include flex-wrap();       
+        }
       }
       
     }
