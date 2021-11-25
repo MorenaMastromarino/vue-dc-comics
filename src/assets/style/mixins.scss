@@ -7,3 +7,8 @@
     justify-content: center;
   }
 }
+
+@mixin flex-wrap() {
+  display: flex;
+  flex-wrap: wrap;
+}

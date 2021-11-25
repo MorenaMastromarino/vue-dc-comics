@@ -1,8 +1,13 @@
 <template>
 
   <div class="serie-card">
-    <img :src="cardImage" :alt="cardTitle">
-    <h3>{{cardTitle}}</h3>      
+
+    <div class="image-box">
+      <img :src="cardImage" :alt="cardTitle">
+    </div>
+
+    <h3>{{cardTitle}}</h3>   
+
   </div> 
   
 </template>
@@ -18,8 +23,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+   @import '../assets/style/vars.scss';
+
   .serie-card {    
-    color: #fff;
     flex-basis: calc(100% / 6);
+    border: 15px solid darken($secondary-color, 8%);
+    color: #fff;
+    .image-box {
+      height: 200px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
   }
 </style>

@@ -120,13 +120,11 @@ export default {
       background-image: url(../assets/img/jumbotron.jpg);
       background-size: cover;
     }    
-    
+
     .current-series{
       background-color: darken($secondary-color, 8%);
       .container {
-        @include center-flex(center);
-        display: flex;
-        flex-wrap: wrap;
+        @include flex-wrap();
         padding: 20px 0;         
       }
       
