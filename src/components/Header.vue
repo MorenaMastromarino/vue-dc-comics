@@ -102,7 +102,7 @@ export default {
         text-transform: uppercase;
         font-size: 12px;
         font-weight: bold;
-        color: #464646;  
+        color: lighten($secondary-color, 20%);  
         &:hover,
         &.active {
           border-bottom: 5px solid $primary-color;

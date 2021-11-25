@@ -115,7 +115,7 @@ export default {
               a {
                 line-height: 20px;
                 font-size: 11px;
-                color: $footer-text-color;
+                color: lighten($secondary-color, 40%);
               }
             }
           }
@@ -130,7 +130,7 @@ export default {
   
     .footer-bottom {
       height: 100px;
-      background-color: #303030;
+      background-color: $secondary-color;
       .container {
         @include center-flex(between);
         height: 100%;
